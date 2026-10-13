@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Minh An Cheat</title>
+<style>
+:root{--bg:#07101f;--panel:#0b1426;--line:#12344a;--blue:#69a3ff;--text:#f2f5fb;--muted:#9daac0;--gold:#f2b928}
+*{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% 10%,#0d2940 0,transparent 30%),linear-gradient(#07101c,#07101f);color:var(--text);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;min-height:100vh}
+.wrap{max-width:720px;margin:auto;padding:26px 18px 100px}.card{position:relative;background:linear-gradient(145deg,rgba(12,29,48,.94),rgba(10,16,32,.97));border:2px solid #12364a;border-radius:24px;padding:26px;margin-bottom:26px;box-shadow:0 0 28px rgba(0,170,255,.08),inset 0 0 30px rgba(20,100,150,.05)}
+.card:before{content:"";position:absolute;left:18px;right:18px;top:-2px;height:3px;background:linear-gradient(90deg,#5596ff,transparent 75%);filter:blur(.4px)}
+h2{font-size:19px;letter-spacing:4px;color:#72aaff;margin:0 0 22px;text-transform:uppercase;text-shadow:0 0 12px #337aff88}.pick{display:inline-block;background:linear-gradient(135deg,#70a7ff,#527ee8);padding:18px 25px;border-radius:9px;font-weight:800;font-size:18px;cursor:pointer;box-shadow:0 0 18px #4388ff33}input[type=file]{display:none}.filename{margin-top:16px;border:2px solid #152b47;border-radius:12px;padding:16px;color:#b7c2d5;min-height:56px}
+.option{display:flex;gap:18px;align-items:flex-start;border:2px solid #23314c;border-radius:14px;padding:20px;margin:15px 0;cursor:pointer}.option.active{border-color:#6a9dff;background:linear-gradient(100deg,#113049aa,#24172faa);box-shadow:0 0 14px #477cff33}.option input{width:23px;height:23px;accent-color:#6ea1ff}.option b{font:800 20px system-ui}.option small{display:block;color:var(--muted);font:600 15px system-ui;margin-top:9px}
+.desc{font:500 17px/1.55 system-ui;color:#c6cfdf;margin-bottom:18px}.tag{font-family:ui-monospace;background:#171c28;border:1px solid #374054;border-radius:5px;padding:2px 7px;color:#ffd369}.colors{display:grid;grid-template-columns:auto 46px;justify-content:start;align-items:center;gap:8px 10px;font:500 18px system-ui}.colors input{width:42px;height:42px;border:2px solid #24405f;border-radius:50%;padding:3px;background:#091426}.colors input::-webkit-color-swatch{border:0;border-radius:50%}
+.rangebox{margin-top:28px;color:#b7c3d7;font-weight:700;font-size:17px}.rangebox strong{color:#dce5f5}input[type=range]{width:100%;margin-top:20px;accent-color:#75a8ff}.create{border:2px solid #253047;background:#111a2b;color:#667087;border-radius:14px;padding:18px 30px;font-weight:900;font-size:18px;cursor:pointer}.create:enabled{background:linear-gradient(135deg,#5d98ff,#426be0);color:white;border-color:#74a8ff}.zalo{position:fixed;right:18px;bottom:18px;background:linear-gradient(135deg,#0875ff,#12b9ef);border:2px solid #73c9ff;border-radius:40px;padding:16px 24px;color:#fff;font:800 18px system-ui;box-shadow:0 0 20px #008cff88}.hide{display:none}@media(max-width:520px){.wrap{padding:18px 12px 95px}.card{padding:20px 16px;border-radius:20px}h2{font-size:16px;letter-spacing:3px}.option b{font-size:18px}.zalo{font-size:16px;padding:14px 18px}}
+</style>
+</head><body><main class="wrap">
+<div style="font:900 27px system-ui;color:#f4f7ff;margin:4px 4px 22px;text-shadow:0 0 14px #5596ff88">Minh An <span style="color:#69a3ff">Cheat</span></div>
+<section class="card"><h2>1. CHỌN FILE BUNDLE</h2><label class="pick" for="bundle">Chọn file bundle</label><input id="bundle" type="file"><div style="margin-top:10px;color:#9daac0;font:600 13px system-ui">Hỗ trợ kiểm tra UnityFS trước khi xuất file.</div><div class="filename" id="filename">Chưa chọn file</div></section>
+<section class="card"><h2>2. CHỌN CHỨC NĂNG</h2>
+<label class="option active"><input type="radio" name="mode" value="gun" checked><span><b>Định vị súng</b><small>Định Vị Súng 2 Lớp Tích Hợp Keo Trong Xuất</small></span></label>
+<label class="option"><input type="radio" name="mode" value="char"><span><b>Định vị nhân vật</b><small>Make Màu Tự Động Và Dạng Định Vị Neww</small></span></label></section>
+<section class="card" id="gunPanel"><h2>ĐỊNH VỊ SÚNG</h2><div class="desc">Công Cụ Chỉnh Sửa Màu Định Vị Súng <span class="tag">Và Keo Trong Xuất</span> <span class="tag">Tool Make Màu Tự Động</span> và <span class="tag">Antiban</span>.</div>
+<div class="colors"><span>Màu súng</span><input type="color" value="#704b00"><span>Màu viền</span><input type="color" value="#ffffff"><span>Màu keo</span><input type="color" value="#d69600"></div>
+<div class="rangebox">Độ dày viền: <strong id="thickV">4.0</strong><input id="thick" type="range" min="0" max="20" value="4" step="0.5"></div>
+<div class="rangebox">Độ đục màu súng: <strong id="opacityV">1.00</strong><input id="opacity" type="range" min="0" max="1" value="1" step="0.01"></div></section>
+<section class="card"><button class="create" id="create" disabled>Tạo file</button></section>
+</main><a class="zalo" href="https://zalo.me/0325409177" target="_blank" rel="noopener noreferrer" style="text-decoration:none">Ⓩ &nbsp; Zalo 0325409177</a>
+<script>
+const f=document.querySelector('#bundle'),nameEl=document.querySelector('#filename'),btn=document.querySelector('#create');f.onchange=()=>{nameEl.textContent=f.files[0]?.name||'Chưa chọn file';btn.disabled=!f.files.length};
+document.querySelectorAll('.option input').forEach(r=>r.onchange=()=>{document.querySelectorAll('.option').forEach(x=>x.classList.remove('active'));r.closest('.option').classList.add('active');document.querySelector('#gunPanel').classList.toggle('hide',r.value!=='gun')});
+const t=document.querySelector('#thick'),o=document.querySelector('#opacity');t.oninput=()=>document.querySelector('#thickV').textContent=(+t.value).toFixed(1);o.oninput=()=>document.querySelector('#opacityV').textContent=(+o.value).toFixed(2);
+btn.onclick=async()=>{
+  const file=f.files[0]; if(!file)return;
+  const bytes=new Uint8Array(await file.arrayBuffer());
+  const sig=new TextDecoder().decode(bytes.slice(0,7));
+  if(sig!=="UnityFS"){alert("File không phải UnityFS AssetBundle hợp lệ.");return;}
+  // Bản hiện tại bảo toàn nguyên bundle: không patch byte khi chưa biết chính xác cấu trúc shader/property.
+  // Điều này tránh tạo bundle hỏng. Khi có bundle mẫu đã chỉnh, patcher có thể được thêm tại đây.
+  const blob=new Blob([bytes],{type:"application/octet-stream"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+  a.download=file.name+".output"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+};
+</script></body></html>
